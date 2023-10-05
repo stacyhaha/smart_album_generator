@@ -1,0 +1,47 @@
+[
+  {
+    "image": "images/image1.png",
+    "template_info": {
+      "template_idx": "A4_1",
+      "location_idx": 0,
+      "location_left_upper": [
+        0.2,
+        0.6
+      ],
+      "location_right_bottom": [
+        0.2,
+        0.8
+      ]
+    }
+  },
+  {
+    "image": "images/image2.png",
+    "template_info": {
+      "template_idx": "A4_1",
+      "location_idx": 1,
+      "location_left_upper": [
+        0.2,
+        0.6
+      ],
+      "location_right_bottom": [
+        0.2,
+        0.8
+      ]
+    }
+  },
+  {
+    "image": "images/image3.png",
+    "template_info": {
+      "template_idx": "A4_2",
+      "location_idx": 0,
+      "location_left_upper": [
+        0.2,
+        0.6
+      ],
+      "location_right_bottom": [
+        0.2,
+        0.8
+      ]
+    }
+  }
+]
