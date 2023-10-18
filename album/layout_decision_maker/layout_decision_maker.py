@@ -22,7 +22,7 @@ class LayoutDecisionMaker:
         self.template_dir = template_dir
         self.template_manager = TemplateManager(template_dir=template_dir)
     
-    def predict(self, recognition_result, **kwargs):
+    def predict(self, recognition_result, predict_res_path, **kwargs):
         """
         * Input: 图片属性信息路径，例如tests/recognition_result.json
         * output: 输出图片所处模版信息
@@ -42,9 +42,15 @@ class LayoutDecisionMaker:
            }
 	]
         """
-        ga = GA(self.template_dir, recognition_result, n_generation=30, pop_size=5)
+        user_config = kwargs.get("user_config", {})
+        
+        ga = GA(self.template_dir, recognition_result, user_config=user_config, n_generation=3, pop_size=5)
         align_result = ga.generate()
 
+        with open(predict_res_path, "w") as f:
+            f.write(json.dumps(align_result, indent=2))
+        logger.info("finish layout decision making part")
+        logger.info(f"output path: {predict_res_path}")
     
         
 
@@ -54,7 +60,7 @@ if __name__ == "__main__":
     template_dir= "/Users/stacy/iss/smart_album_generator/templates"
     recognition_result="/Users/stacy/iss/smart_album_generator/tests/recognition_result.json"
     layout_decision_maker = LayoutDecisionMaker(template_dir)
-    layout_decision_maker.predict(recognition_result)
+    layout_decision_maker.predict(recognition_result, "layout_decision_maker_result.json")
 
 
 
