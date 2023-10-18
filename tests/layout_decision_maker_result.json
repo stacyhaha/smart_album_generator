@@ -2,45 +2,54 @@
   {
     "image": "images/image1.png",
     "template_info": {
-      "template_idx": "A4_1",
-      "location_idx": 0,
-      "location_left_upper": [
-        0.2,
-        0.6
+      "template_idx": "A4_2_3",
+      "img_idx": 0,
+      "page_idx": 1,
+      "location": [
+        43.21,
+        39.66,
+        264.6,
+        185.28
       ],
-      "location_right_bottom": [
-        0.2,
-        0.8
+      "template_size": [
+        794,
+        1123
       ]
     }
   },
   {
     "image": "images/image2.png",
     "template_info": {
-      "template_idx": "A4_1",
-      "location_idx": 1,
-      "location_left_upper": [
-        0.2,
-        0.6
+      "template_idx": "A4_1_3",
+      "img_idx": 0,
+      "page_idx": 2,
+      "location": [
+        13.02,
+        11.25,
+        213.69,
+        302.48
       ],
-      "location_right_bottom": [
-        0.2,
-        0.8
+      "template_size": [
+        794,
+        1123
       ]
     }
   },
   {
     "image": "images/image3.png",
     "template_info": {
-      "template_idx": "A4_2",
-      "location_idx": 0,
-      "location_left_upper": [
-        0.2,
-        0.6
+      "template_idx": "A4_2_3",
+      "img_idx": 1,
+      "page_idx": 1,
+      "location": [
+        107.14,
+        211.32,
+        264.6,
+        362.27
       ],
-      "location_right_bottom": [
-        0.2,
-        0.8
+      "template_size": [
+        794,
+        1123
       ]
     }
   }
