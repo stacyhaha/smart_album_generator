@@ -15,11 +15,11 @@ from .recognition_models.main_colors_extractor import MainColorsExtractor
 from .recognition_models.background_extractor import BackgroundExtractor
 
 class RecognitionServer:
-    def __init__(self):
+    def __init__(self, weights_path, categories_file):
         self.time_extractor = TimeExtractor()
         self.ratio_extractor = RatioExtractor()
         self.main_colors_extractor = MainColorsExtractor()
-        self.background_extractor = BackgroundExtractor()
+        self.background_extractor = BackgroundExtractor(weights_path, categories_file)
         return
     
     def predict(self, Input, **kwargs):

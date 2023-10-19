@@ -20,9 +20,12 @@ class TestRecognitionServer(unittest.TestCase):
         终端：
         python3.6 -m unittest tests/test_recognition_server.py
         """
-        server = RecognitionServer()
+        server = RecognitionServer(
+            weights_path = r'/Users/stacy/iss/places365-master/resnet50_places365.pth.tar',
+            categories_file = r'/Users/stacy/iss/places365-master/categories_places365.txt'
+            )
         inputs = {
-            "Input": "images/image1.png"
+            "Input": "/Users/stacy/Downloads/IMG_6194.HEIC"
         }
         result = server.predict(**inputs)
         import pprint
