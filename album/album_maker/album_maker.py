@@ -9,9 +9,11 @@
 -------------------------------------------------
 """
 import os
+import pyheif
 import logging
 import pandas as pd
 from PIL import Image
+from pathlib import Path
 from PyPDF2 import PdfMerger
 from datetime import datetime
 
@@ -75,8 +77,11 @@ class AlbumMaker:
 
 
     def edit_image(self, image_path, template_loc):
-        img = Image.open(image_path)
-
+        if image_path.lower().endswith("heic"):
+            img = self.transfer_heic_file(image_path).convert("RGB")
+        else:
+            img = Image.open(image_path).convert("RGB")
+            
         # resize
         img_ratio = img.size[0] * 1.0 / img.size[1]
         template_width = template_loc[2] - template_loc[0]
@@ -101,6 +106,13 @@ class AlbumMaker:
         croped_img = resized_img.crop([x1, y1, x2, y2])
 
         return croped_img
+    
+    def transfer_heic_file(self, image_path):
+        img_path = Path(image_path)
+        img_binary = img_path.open("rb").read()
+        heif_file = pyheif.read(img_binary)
+        img = Image.frombytes(data=heif_file.data, mode=heif_file.mode, size=heif_file.size)
+        return img
 
 
 if __name__ == "__main__":
