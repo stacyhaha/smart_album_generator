@@ -129,7 +129,10 @@ def cal_diff_in_ratio(x, template_manager):
     template_ratio_array = np.array(template_ratio_list)[..., np.newaxis]
     template_tile = np.tile(template_ratio_array, (image_ratio_df.shape[1]))
     
-    diff = abs(image_ratio_df.values - template_tile).mean(1)
+    try:
+        diff = abs(image_ratio_df.values - template_tile).mean(1)
+    except:
+        import pdb;pdb.set_trace()
     min_index = np.argmin(diff)
     value = np.min(diff)
     row, col = divmod(min_index, image_ratio_df.shape[1])

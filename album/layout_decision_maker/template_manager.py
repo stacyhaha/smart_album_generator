@@ -28,7 +28,6 @@ class TemplateManager:
         self.get_template_dict()
         
 
-
     def read_template_file(self, template_dir):
         all_files = os.listdir(template_dir)
         template_files = list(filter(lambda x:x.endswith(".json"), all_files))

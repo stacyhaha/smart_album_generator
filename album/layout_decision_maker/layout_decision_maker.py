@@ -11,8 +11,8 @@
 
 import json 
 import logging 
-from GA import GA
-from template_manager import TemplateManager
+from album.layout_decision_maker.GA import GA
+from album.layout_decision_maker.template_manager import TemplateManager
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__file__)
 
@@ -43,8 +43,8 @@ class LayoutDecisionMaker:
 	]
         """
         user_config = kwargs.get("user_config", {})
-        
-        ga = GA(self.template_dir, recognition_result, user_config=user_config, n_generation=3, pop_size=5)
+        layout_decison_maker_user_config = user_config.get("layout_decison_maker", {})
+        ga = GA(self.template_dir, recognition_result, user_config=layout_decison_maker_user_config, n_generation=50, pop_size=5)
         align_result = ga.generate()
 
         with open(predict_res_path, "w") as f:

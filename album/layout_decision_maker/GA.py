@@ -13,8 +13,8 @@ import json
 import logging 
 import numpy as np
 import pandas as pd
-from template_manager import TemplateManager
-from tools import cal_diff_in_time, cal_diff_in_background, Color, cal_diff_in_ratio
+from album.layout_decision_maker.template_manager import TemplateManager
+from album.layout_decision_maker.tools import cal_diff_in_time, cal_diff_in_background, Color, cal_diff_in_ratio
 
 
 logging.basicConfig(level=logging.INFO)
@@ -113,12 +113,12 @@ class GA:
 
         num_in_page = grouped_page.apply(lambda x: len(x)).mean()
         
-        # print("diff_in_time", diff_in_time)
+        # print("diff_in_time",s diff_in_time)
         # print("diff_in_color", diff_in_color)
         # print("dismatch_value", dismatch_value)
         # print("num_in_page", num_in_page)
 
-        fitness_value = diff_in_time + diff_in_color + dismatch_value - num_in_page
+        fitness_value = 5.0*diff_in_time + diff_in_color + dismatch_value - 4 * num_in_page
         if "background_extractor" in self.image_info_df:
             fitness_value += diff_in_background
             # print("diff in background", diff_in_background)
@@ -165,7 +165,21 @@ class GA:
 
 
         keep_in_parent2 = np.where(keep_in_parent1==-1, parent2, np.zeros_like(parent2)-1)
-        empty_page_num = list(set(range(self.DNA_size))-set(keep_in_parent1)-set(keep_in_parent2))
+        empty_page_num = list(set(range(self.DNA_size))-set(keep_in_parent1))
+        empty_page_idx = 0
+        pending2check_page = np.unique(keep_in_parent2)
+        
+        # transfer page to never used
+        new_keep_in_parent2 = keep_in_parent2.copy()
+        for page in pending2check_page:
+            if page == -1:
+                continue
+            if page in set(keep_in_parent1):
+                new_keep_in_parent2[keep_in_parent2 == page] = empty_page_num[empty_page_idx]
+                empty_page_idx += 1
+        keep_in_parent2 = new_keep_in_parent2
+
+        empty_page_num = list(set(range(self.DNA_size))-set(keep_in_parent1) - set(keep_in_parent2))
         empty_page_idx = 0
         pending2check_page = np.unique(keep_in_parent2)
         for page in pending2check_page:
@@ -176,6 +190,9 @@ class GA:
                 keep_in_parent2[arg] = empty_page_num[empty_page_idx]
                 empty_page_idx += 1
         res = np.vstack([keep_in_parent1, keep_in_parent2]).max(axis=0).tolist()
+        from collections import Counter
+        if 5 in list(Counter(res).values()):
+            import pdb;pdb.set_trace()
         return res
 
 

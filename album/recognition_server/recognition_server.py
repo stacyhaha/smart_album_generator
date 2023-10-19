@@ -34,18 +34,30 @@ class RecognitionServer:
             "time_extractor": "2023-08-04 22:23:53"
 	}
         """
+        user_config = kwargs.get("user_config", {})
+        recognition_server_config = user_config.get("recognition_server", {})
+
         image_capture_time = self.time_extractor.predict(Input)
         image_ratio = self.ratio_extractor.predict(Input)
         image_main_colors = self.main_colors_extractor.predict(Input)
-        image_background = self.background_extractor.predict(Input)
-        mock_result = {
-            "time_extractor": image_capture_time,
-            "ratio_extractor": image_ratio,
-            "main_colors_extractor": image_main_colors,
-            "background_extractor": image_background
-	}
+        if recognition_server_config.get("background_detection", "on") == "on":
+            image_background = self.background_extractor.predict(Input)
+            result = {
+                "image": Input,
+                "time_extractor": image_capture_time,
+                "ratio_extractor": image_ratio,
+                "main_colors_extractor": image_main_colors,
+                "background_extractor": image_background
+            }
+        else:
+            result = {
+                "image": Input,
+                "time_extractor": image_capture_time,
+                "ratio_extractor": image_ratio,
+                "main_colors_extractor": image_main_colors
+            }
         
-        return mock_result
+        return result
     
 
     

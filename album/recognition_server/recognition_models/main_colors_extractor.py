@@ -58,7 +58,7 @@ class MainColorsExtractor:
         result = []
         for index in sorted_indices:
             dominance = counts[index] / len(pixels)
-            result.append([tuple(kmeans.cluster_centers_[index].astype(int)), dominance])
+            result.append([tuple(kmeans.cluster_centers_[index].astype(int).tolist()), dominance])
 
         return result
     
