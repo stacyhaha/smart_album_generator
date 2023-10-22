@@ -1,12 +1,15 @@
+import os
 from flask import Flask, request, jsonify
 from album.album import Album
 app = Flask(__name__)
 
+
 #config
-workspace = "/Users/stacy/iss/workspace"
-weights_path = r'/Users/stacy/iss/places365-master/resnet50_places365.pth.tar'
-categories_file = r'/Users/stacy/iss/places365-master/categories_places365.txt'
-template_dir= "/Users/stacy/iss/smart_album_generator/templates"
+basic_path = os.path.abspath(os.path.dirname(__file__))
+workspace = os.path.join(os.path.dirname(basic_path), "workspace")
+weights_path = os.path.join(basic_path, "models/places365-master/resnet50_places365.pth.tar")
+categories_file = os.path.join(basic_path, "models/places365-master/categories_places365.txt")
+template_dir= os.path.join(basic_path, "templates")
 
 album = Album(
     workspace = workspace,

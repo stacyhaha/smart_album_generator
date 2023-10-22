@@ -1,0 +1,11 @@
+Flask
+Pillow
+pyheif
+imagehash
+exifread
+scikit-learn
+torch
+torchvision
+pandas
+opencv-python
+PyPDF2
