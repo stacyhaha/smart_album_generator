@@ -67,7 +67,7 @@ class AlbumMaker:
     def generate_one_page(self, image_df, user_config):
         background_color = user_config.get("background_color", (255, 255, 255))
         size = image_df.template_size.iloc[0]
-        page = Image.new(mode="RGB", size=size, color=background_color)
+        page = Image.new(mode="RGB", size=size, color=tuple(background_color))
 
         for i in range(image_df.shape[0]):
             img = self.edit_image(image_df.iloc[i]["image"], image_df.iloc[i]["location"])

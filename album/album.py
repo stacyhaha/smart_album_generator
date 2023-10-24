@@ -50,7 +50,7 @@ class Album:
             recog_res.append(this_recog_res)
             logger.info(f"finish recog image: {this_image}")
         datetime_now = datetime.now().strftime("%Y.%m.%d_%H.%M.%S")
-        usr_dir = os.path.join(self.workspace, datetime_now)
+        usr_dir = os.path.join(os.path.dirname(image_dir), datetime_now)
         os.mkdir(usr_dir)
         recog_res_path = os.path.join(usr_dir, "recog_res.json")
         with open(recog_res_path, "w") as f:
