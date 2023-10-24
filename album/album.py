@@ -34,7 +34,7 @@ class Album:
     def predict(self, image_dir, user_config):
         images = os.listdir(image_dir)
         images = list(
-            filter(lambda x:x.lower().endswith("jpg") or x.lower().endswith("jpge") or x.lower().endswith("heic"),
+            filter(lambda x:x.lower().endswith("jpg") or x.lower().endswith("jpeg") or x.lower().endswith("heic"),
             images))
         logger.info(f"original images num: {len(images)}")
         images = [os.path.join(image_dir, i) for i in images]
