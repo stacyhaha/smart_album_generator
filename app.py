@@ -31,17 +31,40 @@ album = Album(
 @app.route("/album", methods=["POST"])
 def make_album():
     logger.info("get a request")
-    #input_arg = request.json
-    logger.info(str(request.json))
-    #logger.info(str(input_arg))
-    #album_path = album.predict(**input_arg)
-    album_path=""
-    logger.info("finish")
-    return jsonify({"album_path": album_path})
+    input_json = request.json
+    logger.info(str(input_json))
+    image_dir, user_config = preprocess_input(input_json)
+    if image_dir:
+        album_path = album.predict(image_dir, user_config)
+        logger.info("finish")
+        return jsonify({"album_path": album_path})
+    else:
+        return jsonify({"album_path": None})
 
-@app.route("/", methods=["GET"])
-def a():
-    return "Hello"
+
+def preprocess_input(Input):
+    """
+    process the input data
+    """
+    user_config = {}
+    image_dir = ""
+    if "name-2" in Input:
+        user_config["layout_decison_maker"] = {"max_num_pics_in_one_page": int(Input["name-2"])}
+    if "background_color12" in Input:
+        bg_color = Input["background_color12"]
+        r = int(bg_color[1:3], 16)
+        g = int(bg_color[3:5], 16)
+        b = int(bg_color[5:7], 16)
+        user_config["album_maker"] = {"background_color": (r, g, b)}
+    if "field-3" in Input:
+        bg_extract_switch = "on" if Input["field-3"] == "First" else "off"
+        user_config["recognition_server"] = {"background_detection": bg_extract_switch}
+    if "uploadedFilePaths" in Input:
+        image_dir = Input["uploadedFilePaths"]
+    return image_dir, user_config
+
+
+
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
