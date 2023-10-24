@@ -41,10 +41,10 @@ class TimeExtractor:
                             formatted_date = date_str.replace(":", "-",2)
                             return f"{formatted_date} {time_str}"
                 else:
-                    return None
+                    return "2000-01-01 00:00:00"
         except Exception as e:
             print(f"Error reading photo info: {str(e)}")
-            return None
+            return "2000-01-01 00:00:00"
 
     def get_heic_datetime(self, heic_path):
         heif_file = pyheif.read(heic_path)
