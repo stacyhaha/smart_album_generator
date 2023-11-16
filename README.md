@@ -1,7 +1,7 @@
 **Intelligent Album Generator**
 **SECTION 1: PROJECT TITLE**
 
-[![Intelligent Album Generator]([https://your-image-url.jpg](https://i9.ytimg.com/vi/-L9mqh4XUWo/mqdefault.jpg?sqp=CMCn1qoG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gEygUMA8=&rs=AOn4CLBFP8uelM4eQxeu1GvrqfBY09sxkw))](https://youtu.be/-L9mqh4XUWo "SnapYummy -- Intelligent Cooking Assistant")
+[![Intelligent Album Generator]((https://i9.ytimg.com/vi/-L9mqh4XUWo/mqdefault.jpg?sqp=CMCn1qoG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gEygUMA8=&rs=AOn4CLBFP8uelM4eQxeu1GvrqfBY09sxkw))](https://youtu.be/-L9mqh4XUWo "SnapYummy -- Intelligent Cooking Assistant")
 
 **SECTION 2: EXECUTIVE SUMMARY / PAPER ABSTRACT**
 
