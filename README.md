@@ -18,7 +18,7 @@ In the fast-paced modern era, the abundance of personal photos often leads to di
 
 **SECTION 4: USER GUIDE**
 
-Please refer to the User Guide for detailed instructions on how to use the Intelligent Album Generator.[User Guide](https://github.com/stacyhaha/smart_album_generator/blob/main/User%20Guide.pdf)
+Please refer to the [User Guide](https://github.com/stacyhaha/smart_album_generator/blob/main/User%20Guide.pdf) for detailed instructions on how to use the Intelligent Album Generator.
 
 
 **SECTION 5: PROJECT REPORT / PAPER**
