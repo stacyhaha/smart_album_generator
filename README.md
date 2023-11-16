@@ -1,7 +1,7 @@
 **Intelligent Album Generator**
 **SECTION 1: PROJECT TITLE**
 
-[![SnapYummy -- Intelligent Cooking Assistant](https://i9.ytimg.com/vi/-L9mqh4XUWo/mqdefault.jpg?sqp=CMCn1qoG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gEygUMA8=&rs=AOn4CLBFP8uelM4eQxeu1GvrqfBY09sxkw)](https://youtu.be/-L9mqh4XUWo "SnapYummy -- Intelligent Cooking Assistant")
+[![SnapYummy -- Intelligent Cooking Assistant](https://i9.ytimg.com/vi/-L9mqh4XUWo/mqdefault.jpg?sqp=CMCn1qoG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gEygUMA8=&rs=AOn4CLBFP8uelM4eQxeu1GvrqfBY09sxkw)](https://youtu.be/-L9mqh4XUWo)
 
 
 
@@ -14,7 +14,7 @@ In the fast-paced modern era, the abundance of personal photos often leads to di
 
 **SECTION 3: VIDEO OF SYSTEM MODELLING & USE CASE DEMO**
 
-[![Intelligent Album Generator](https://i9.ytimg.com/vi/vbuaxch2F8I/mqdefault.jpg?sqp=CMCn1qoG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8%3D&rs=AOn4CLD-q-Olx2hiESknixMYDh0ZrqHLBg&retry=5)](https://youtu.be/vbuaxch2F8I "SnapYummy -- Intelligent Cooking Assistant")
+[![Intelligent Album Generator](https://i9.ytimg.com/vi/vbuaxch2F8I/mqdefault.jpg?sqp=CMCn1qoG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8%3D&rs=AOn4CLD-q-Olx2hiESknixMYDh0ZrqHLBg&retry=5)](https://youtu.be/vbuaxch2F8I)
 
 
 **SECTION 4: USER GUIDE**
