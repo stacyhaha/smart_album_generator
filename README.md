@@ -23,7 +23,7 @@ Our team is dedicated to overcoming these challenges and continually improving t
 
 **SECTION 4: VIDEO OF SYSTEM MODELLING & USE CASE DEMO**
 
-[Technique video for system architecture and demo case Placeholder](https://youtu.be/vbuaxch2F8I)
+[![Intelligent Album Generator]([https://i9.ytimg.com/vi/-L9mqh4XUWo/mqdefault.jpg?sqp=CMCn1qoG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gEygUMA8=&rs=AOn4CLBFP8uelM4eQxeu1GvrqfBY09sxkw](https://i9.ytimg.com/vi/vbuaxch2F8I/mqdefault.jpg?sqp=CMCn1qoG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8%3D&rs=AOn4CLD-q-Olx2hiESknixMYDh0ZrqHLBg&retry=5))](https://youtu.be/-L9mqh4XUWo "SnapYummy -- Intelligent Cooking Assistant")
 
 **SECTION 5: USER GUIDE**
 
