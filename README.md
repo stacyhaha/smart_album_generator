@@ -24,5 +24,5 @@ Please refer to the [User Guide](https://github.com/stacyhaha/smart_album_genera
 
 **SECTION 5: PROJECT REPORT / PAPER**
 
-Refer to the project report in the GitHub Folder: ProjectReport for an in-depth analysis and technical details of the project.
+Refer to the [project report](https://github.com/stacyhaha/smart_album_generator/blob/main/ISY5001_Report_Group17.pdf） in the GitHub Folder: ProjectReport for an in-depth analysis and technical details of the project.
 
